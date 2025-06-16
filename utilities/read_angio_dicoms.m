@@ -62,7 +62,7 @@ function [directory,res,pixdim,angio3d,orientation,position,directionFlag]=read_
                         elseif norm(position2-pos3)<0.2
                             directionFlag=1;
                         else
-                            error("most likely there is an implementation error")
+                            error("most likely there is a problem with the data")
                         end
 
                     end

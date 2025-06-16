@@ -7,6 +7,7 @@
 
 function [distances,distance] = curvedistance(app,points,gen,fit)
 h=waitbar(0,sprintf('Initializing distance computation'));
+h.CloseRequestFcn = '';
 distance=0;
 d=size(points,2);
 distances=zeros(size(points,1),1);
@@ -51,21 +52,31 @@ switch dim
         hold on
         plot(app.Display2,points_start(:,1),points_start(:,2),newpoints(:,1),newpoints(:,2))
         plot(app.Display2,newpoints((((1:size(points,1))-1)*gen*fit+1),1),newpoints((((1:size(points,1))-1)*gen*fit+1),2),'*')
-        app.Display2.XLim=[minp(1) maxp(1)]
-        app.Display2.YLim=[minp(2) maxp(2)]
+        if minp(1)<maxp(1)
+            app.Display2.XLim=[minp(1) maxp(1)]
+        end
+        if minp(2)<maxp(2)
+            app.Display2.YLim=[minp(2) maxp(2)]
+        end
         hold off
     case 3
         hold on
         plot3(app.Display2,points_start(:,1),points_start(:,2),points_start(:,3),newpoints(:,1),newpoints(:,2),newpoints(:,3))
         plot3(app.Display2,newpoints((((1:size(points,1))-1)*gen*fit+1),1),newpoints((((1:size(points,1))-1)*gen*fit+1),2),newpoints((((1:size(points,1))-1)*gen*fit+1),3),'*')
-        app.Display2.XLim=[minp(1) maxp(1)]
-        app.Display2.YLim=[minp(2) maxp(2)]
-        app.Display2.ZLim=[minp(3) maxp(3)]
+        if minp(1)<maxp(1)
+            app.Display2.XLim=[minp(1) maxp(1)]
+        end
+        if minp(2)<maxp(2)
+            app.Display2.YLim=[minp(2) maxp(2)]
+        end
+        if minp(3)<maxp(3)
+            app.Display2.ZLim=[minp(3) maxp(3)]
+        end
         hold off
     otherwise
         fprintf("no plotable dimension")
 end
-close(h);
+delete(h);
 end
 
 function point = deCasteljau(t, pts)
