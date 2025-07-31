@@ -1,3 +1,4 @@
+%Author: LWeissinger
 function [rho_rec,fitting_error,data_error,pwv_rec,alpha] = solveLinear_tikh_min(rho,PWVs,param,method)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
@@ -10,7 +11,6 @@ str2='tikh';
 str5='tikh + bw cond';
 str3='FISTA';
 str6='FISTA + bw cond';
-str4='direct';
 if param.showwaitbar~=0
     h=waitbar(0,"Estimating PWV");
 end
@@ -25,8 +25,6 @@ for run=1:steps
         [rho_rec,alpha(run)]=solveLinear_FISTA(rho,param);
     elseif strcmp(method,str6)
         [rho_rec,alpha(run)]=solveLinear_FISTAbw(rho,param);
-    elseif strcmp(method,str4)
-        [rho_rec,alpha(run)]=solveLinearSim_voss(rho,param);
     elseif strcmp(method,str5)
         [rho_rec,alpha(run)]=solveLinear_tikh_GD(rho,param);
     end
@@ -46,8 +44,6 @@ elseif strcmp(method,str5)
     [rho_rec,alpha_min] = solveLinear_tikh_GD(rho,param);
 elseif strcmp(method,str6)
     [rho_rec,alpha_min] = solveLinear_FISTAbw(rho,param);
-elseif strcmp(method,str4)
-    [rho_rec,alpha_min]=solveLinearSim_voss(rho,param);
 end
 if param.showwaitbar~=0
     close(h);

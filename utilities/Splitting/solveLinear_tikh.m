@@ -1,3 +1,4 @@
+%Author: LWeissinger
 function [rho_rec,alpha] = solveLinear_tikh(rho,param)
 %% Solve Pulsewave splitting problem with Tikhonov Regularization
 %% Transform Problem into Frequency Domain

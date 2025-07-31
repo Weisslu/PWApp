@@ -1,4 +1,5 @@
 function [shifted_array] = shift_position(X,pos1,ori1,pixdim1,sizey,pos2,ori2,pixdim2)
+% Author: LWeissinger
 % Input is an array with 3-d indices of the nonzero values of a binary 3-d array,
 % the real position of the first point in the array (pos) 
 % and the orientation of the row and columns of the array via direction cosines (ori)

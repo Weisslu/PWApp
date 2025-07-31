@@ -1,3 +1,4 @@
+%Author: LWeissinger, 18.07.2025
 %%Assumes that the variable points holds the vertices of a bezier-curve and
 %%returns the length of this curve. accuracy improves with increased
 %%integer input "gen". "fit" assumes linear interpolated additional
@@ -7,7 +8,6 @@
 
 function [distances,distance] = curvedistance(app,points,gen,fit)
 h=waitbar(0,sprintf('Initializing distance computation'));
-h.CloseRequestFcn = '';
 distance=0;
 d=size(points,2);
 distances=zeros(size(points,1),1);
@@ -25,7 +25,9 @@ points_start(size(points_start,1),:)=points(size(points,1),:);
 s=(size(points_start,1)-1)*gen+1;
 newpoints=zeros(s,d);
 for run=1:s
-    waitbar (run/s, h,sprintf('Distance computation'))
+    if isvalid(h)
+        waitbar (run/s, h,sprintf('Distance computation'))
+    end
     t=(run-1)/((size(points_start,1)-1)*gen);
     newpoints(run,:)=deCasteljau(t,points_start);
     if run>1

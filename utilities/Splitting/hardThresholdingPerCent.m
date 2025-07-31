@@ -1,3 +1,4 @@
+%Author: LWeissinger, 31.07.2025
 function H=hardThresholdingPerCent(x,t)
 H=zeros(size(x));
 n=numel(x);

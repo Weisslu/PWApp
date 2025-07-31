@@ -1,3 +1,4 @@
+%Author: LWeissinger, 31.07.2025
 function [rel_error] = dataError(rho,rho_rec,Nwaves)
 % data error, but not in fourier space. Should be equal due to parseval,
 % plancherel?

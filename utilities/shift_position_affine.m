@@ -1,3 +1,4 @@
+%Author: LWeissinger
 function [shifted_array,indices] = shift_position_affine(X,pos1,ori1,pixdim1,sizey,pos2,ori2,pixdim2,d1,d2,int,cutoff)
     % Input X is a 3-d binary array with pixeldimensions given in pixdim1
     % The nonzero indices are the basiscoefficients of the affine transformed

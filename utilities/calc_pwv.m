@@ -102,6 +102,12 @@ for slice = 2:size(waveforms,1)
 %             tempDelay = tempDelay/(s1/s2);  
 %             tempDelay = tempDelay*(S(1)/S(slice));
             D(slice - 1) = tempDelay;
+
+        case 3      % TTF
+            p1=polyfit(pts1,flow_sl1(pts1),1);
+            p2=polyfit(pts2,flow_sl2(pts2),1);
+            tempDelay = -p2(2)/p2(1)+p1(2)/p1(1);
+            D(slice-1) = tempDelay;
     end
     
     if plot_steps && mod(slice,10) == 5

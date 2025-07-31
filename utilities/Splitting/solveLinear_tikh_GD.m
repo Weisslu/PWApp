@@ -1,3 +1,4 @@
+%Author: LWeissinger
 function [rho_rec,alpha] = solveLinear_tikh_GD(rho,param)
 %% Solve Pulsewave splitting problem with Tikhonov Regularization
 %% Implemented via Gradient Descent algorithm to incorporate constraint x2<x1
