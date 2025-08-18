@@ -304,6 +304,7 @@ for i = 1:length(labels)
     % find branch
     branchActual = branchList(branchList(:,4) == labels(i), :);
     branchActual = sortrows(branchActual, 5);
+    branchActual(:,5) = 1:size(branchActual,1);
 
     
 

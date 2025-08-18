@@ -55,10 +55,10 @@ switch dim
         plot(app.Display2,points_start(:,1),points_start(:,2),newpoints(:,1),newpoints(:,2))
         plot(app.Display2,newpoints((((1:size(points,1))-1)*gen*fit+1),1),newpoints((((1:size(points,1))-1)*gen*fit+1),2),'*')
         if minp(1)<maxp(1)
-            app.Display2.XLim=[minp(1) maxp(1)]
+            app.Display2.XLim=[minp(1) maxp(1)];
         end
         if minp(2)<maxp(2)
-            app.Display2.YLim=[minp(2) maxp(2)]
+            app.Display2.YLim=[minp(2) maxp(2)];
         end
         hold off
     case 3
@@ -66,13 +66,13 @@ switch dim
         plot3(app.Display2,points_start(:,1),points_start(:,2),points_start(:,3),newpoints(:,1),newpoints(:,2),newpoints(:,3))
         plot3(app.Display2,newpoints((((1:size(points,1))-1)*gen*fit+1),1),newpoints((((1:size(points,1))-1)*gen*fit+1),2),newpoints((((1:size(points,1))-1)*gen*fit+1),3),'*')
         if minp(1)<maxp(1)
-            app.Display2.XLim=[minp(1) maxp(1)]
+            app.Display2.XLim=[minp(1) maxp(1)];
         end
         if minp(2)<maxp(2)
-            app.Display2.YLim=[minp(2) maxp(2)]
+            app.Display2.YLim=[minp(2) maxp(2)];
         end
         if minp(3)<maxp(3)
-            app.Display2.ZLim=[minp(3) maxp(3)]
+            app.Display2.ZLim=[minp(3) maxp(3)];
         end
         hold off
     otherwise
