@@ -15,7 +15,9 @@ authors:
     affiliation: 2 
   - name: Ronny Ramlau 
     orcid: 0000-0002-0277-9615 
-    affiliation: "1, 2" 
+    affiliation: 
+     - 1
+     - 2
   - name: Henning U. Voss 
     orcid: 0000-0003-2811-2074 
     affiliation: 3 
