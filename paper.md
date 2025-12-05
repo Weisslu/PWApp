@@ -1,32 +1,34 @@
 ---
-title: 'PWApp: MATLAB GUI for Pulse Wave Velocity Estimation and Pulse Wave Splitting'
+title: "PWApp: MATLAB GUI for Pulse Wave Velocity Estimation and Pulse Wave Splitting"
 tags:
-- pulse wave velocity
-- MRI
-- MATLAB
+  - pulse wave velocity
+  - MRI
+  - MATLAB
+
 authors:
-- name: Lukas Weissinger
-  orcid: 0000-0003-1032-8774
-  corresponding: true # (This is how to denote the corresponding author)
-  affiliation: 1 # (Multiple affiliations must be quoted)
-- name: Simon Hubmer
-  orcid: 0000-0002-8494-5188
-  affiliation: 2 # (Multiple affiliations must be quoted)
-- name: Ronny Ramlau
-  orcid: 0000-0002-0277-9615
-  affiliation: "1,2" # (Multiple affiliations must be quoted)
-- name: Henning U. Voss
-  orcid: 0000-0003-2811-2074
-  affiliation: 3 # (Multiple affiliations must be quoted)
+  - name: Lukas Weissinger
+    orcid: 0000-0003-1032-8774
+    corresponding: true
+    affiliation: 1
+  - name: Simon Hubmer
+    orcid: 0000-0002-8494-5188
+    affiliation: 2
+  - name: Ronny Ramlau
+    orcid: 0000-0002-0277-9615
+    affiliation: "1,2"
+  - name: Henning U. Voss
+    orcid: 0000-0003-2811-2074
+    affiliation: 3
 affiliations:
-- name: Johann Radon Institute Linz, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
-  index: 1
-- name: Johannes Kepler University Linz, Institute of Industrial Mathematics, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
-  index: 2
-- name: Cornell University - College of Human Ecology, Cornell MRI Facility, Martha Van Rensselaer Hall, Ithaca NY 14853, United States of America
-  index: 3
-date: 04 December 2025
+  - name: Johann Radon Institute Linz, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
+    index: 1
+  - name: Johannes Kepler University Linz, Institute of Industrial Mathematics, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
+    index: 2
+  - name: Cornell University - College of Human Ecology, Cornell MRI Facility, Martha Van Rensselaer Hall, Ithaca NY 14853, United States of America
+    index: 3
+date: "2025-12-04"
 bibliography: paper.bib
+
 
 # Summary
 
