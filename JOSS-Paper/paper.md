@@ -26,7 +26,7 @@ affiliations:
 - name: Cornell University - College of Human Ecology, Cornell MRI Facility, Martha Van Rensselaer Hall, Ithaca NY 14853, United States of America
   index: 3
 date: 04 December 2025
-bibliography: paper.bib
+bibliography: JOSS-paper/paper.bib
 
 # Summary
 
