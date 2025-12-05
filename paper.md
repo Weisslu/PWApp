@@ -5,28 +5,28 @@ tags:
   - MRI
   - MATLAB
 
-authors:
-  - name: Lukas Weissinger
+authors: 
+  - name: Lukas Weissinger 
     orcid: 0000-0003-1032-8774
     corresponding: true
     affiliation: 1
-  - name: Simon Hubmer
+  - name: Simon Hubmer 
     orcid: 0000-0002-8494-5188
-    affiliation: 2
-  - name: Ronny Ramlau
-    orcid: 0000-0002-0277-9615
-    affiliation: "1,2"
-  - name: Henning U. Voss
-    orcid: 0000-0003-2811-2074
-    affiliation: 3
+    affiliation: 2 
+  - name: Ronny Ramlau 
+    orcid: 0000-0002-0277-9615 
+    affiliation: "1,2" 
+  - name: Henning U. Voss 
+    orcid: 0000-0003-2811-2074 
+    affiliation: 3 
 affiliations:
-  - name: Johann Radon Institute Linz, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
+  - name: Johann Radon Institute Linz, Altenbergerstraße 69, A-4040 Linz, Austria
     index: 1
-  - name: Johannes Kepler University Linz, Institute of Industrial Mathematics, Altenbergerstra{\\ss}e 69, A-4040 Linz, Austria
+  - name: Johannes Kepler University Linz, Institute of Industrial Mathematics, Altenbergerstraße 69, A-4040 Linz, Austria
     index: 2
   - name: Cornell University - College of Human Ecology, Cornell MRI Facility, Martha Van Rensselaer Hall, Ithaca NY 14853, United States of America
     index: 3
-date: "2025-12-04"
+date: "2025-12-04" 
 bibliography: paper.bib
 
 
