@@ -1,5 +1,5 @@
 %% Author: LWeissinger
-%% Solve Pulsewave splitting problem with Tikhonov Regularization
+%% Solve Pulsewave splitting problem with FISTA and backwards condition
 function [rho_rec,alpha] = solveLinear_FISTAbw(rho,param)
     %% Force the input to be a column vector.
     

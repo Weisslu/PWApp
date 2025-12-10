@@ -1,8 +1,8 @@
+%% Author: LWeissinger
+%% Description: All physical and discretization parameters are specified and
+%% stored in the struct param
+%% Output: Struct containing all involved physical parameters of the problem
 function param = paramSettingsAPP(tRes,nframes,Nwaves,distances)
-    %Author: LWeissinger
-    %Description: All physical and discretization parameters are specified and
-    %stored in the struct param
-    %Output: Struct containing all involved physical parameters of the problem
     param.mode='real';
     param.parameter_choice_rule='apriori'; %fixed here - other options only available in simulation setting
     % max iterations in Gradient Descent/FISTA

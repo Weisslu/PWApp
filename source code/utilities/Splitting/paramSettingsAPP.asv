@@ -1,0 +1,19 @@
+function param = paramSettingsAPP(tRes,nframes,Nwaves,distances)
+%Author: LWeissinger
+%Description: All physical and discretization parameters are specified and
+%stored in the struct param
+%Output: Struct containing all involved physical parameters of the problem
+param.mode='real';
+% Parameters for (linear) Regularization
+% either 'apriori'(specify below in this case), 'dp' or 'minerr'(minerr only available in simulation)
+param.parameter_choice_rule='apriori'; 
+% max iterations in FISTA
+param.max_it=5000;
+
+param.Nwaves=Nwaves;
+param.m=nframes;
+param.effectivedT=tRes;
+param.distance=distances;
+param.taxis=transpose(0:param.m-1)*param.effectivedT;
+end
+

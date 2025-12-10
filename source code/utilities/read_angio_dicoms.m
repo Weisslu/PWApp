@@ -70,7 +70,6 @@ function [directory,res,pixdim,angio3d,orientation,position,directionFlag]=read_
                     data=dicomread(filename);
                     angio3d(:,:,z)=data;
             end
-        %save(filename_angio, 'angio3d','-v7.3');
     end
     close(h)
 end

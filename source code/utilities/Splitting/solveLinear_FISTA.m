@@ -1,5 +1,5 @@
 %% Author: LWeissinger
-
+%% Solve Pulsewave splitting problem with FISTA
 function [rho_rec,alpha] = solveLinear_FISTA(rho,param)
     %% Force the input to be a column vector.
     
@@ -12,13 +12,13 @@ function [rho_rec,alpha] = solveLinear_FISTA(rho,param)
     A=operatorA(param);
     
     %% Precomputations
-    
+    alpha = param.alpha;
     Y=zeros(param.Nwaves*param.m,1);
     for it=1:param.Nwaves
         Y(((it-1)*param.m+1):(it*param.m))=rho.data{it};
     end
     %Include adjoint embedding operator for weighted spaces
-    d=(param.beta*abs([0:floor(param.m/2)-1 floor(-param.m/2):-1]).^2+1).^(-param.s);
+    d=(abs([0:floor(param.m/2)-1 floor(-param.m/2):-1]).^2+1).^(-param.s);
     Adj_embedding=diag([d d]);
     Aadj=Adj_embedding*A';
     omega=1/(2*double(param.Nwaves));%Operator norm known for Lipschitz-constant
