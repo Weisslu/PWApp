@@ -116,22 +116,7 @@ if directory ~= 0
                 end
             end
         end
-        %save(filename_phis, 'phis','-v7.3');
-        %save(filename_mags, 'mags','-v7.3');
-        %save(filename_delays,'delays','-v7.3');
-        %mm = mean(mags,4); vMean = abs(squeeze(mean(phis,4)));
-        %vangio3d_I = mm.*sin( pi/2*rescale(vMean,0,1));
-        %vangio3d_VI = mean((mags.^2),4).*mean((phis.^2),4);
-        %vangio3d_II = (sum((abs(mags).*abs(phis)).^2,4)).^(1/2);
         vangio3d = mean(mags.*phis,4);
-        %figure
-        %imagesc(reshape(max(vangio3d_I,[],3),[size(vangio3d_I,1) size(vangio3d_I,2)]))
-        %figure
-        %imagesc(reshape(max(vangio3d_VI,[],3),[size(vangio3d_VI,1) size(vangio3d_VI,2)]))
-        %figure
-        %imagesc(reshape(max(vangio3d_II,[],3),[size(vangio3d_II,1) size(vangio3d_II,2)]))
-        %figure
-        %imagesc(reshape(max(vangio3d_VII,[],3),[size(vangio3d_VII,1) size(vangio3d_VII,2)]))
     elseif numberoffiles == 4*tdim*zdim
         done=0;
         fileind=0;
