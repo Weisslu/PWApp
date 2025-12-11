@@ -43,28 +43,23 @@ bibliography: paper.bib
 
 # Summary
 
-The PWApp is a MATLAB software package enabling scientific research involving pulse
-wave velocity (PWV) estimation from MRI-based 2D or 4D blood flow velocity data. A
-graphical user interface simplifies investigations regarding PWV estimation and enables
-proper comparison and testing of state-of-the-art and novel methods for MRI flow-data
-based PWV estimation.
+The PWApp is a MATLAB software package enabling scientific research involving pulse wave velocity (PWV) estimation and splitting of the pulse waves into forward and backwards travelling parts from MRI-based 2D or 4D blood flow velocity data. A graphical user interface simplifies investigations regarding PWV estimation and enables proper comparison and testing of state-of-the-art and novel methods.
 
 # Statement of need
 
-The PWV is a well-studied parameter in medicine, known to correlate with aging and neuro-degenerative diseases [@Li:2004; @GillerAasli:1994;@RabbenStergiopulosHellevikSmisethSloerdahlUrheimAngelsen:2004; @VulliemozStergiopulosMeuli:2002]. Due to its potential as a biomarker for early diagnosis of such conditions, accurate measurement of the PWV has garnered significant interest [@DarwichLangevinDarwich:2015; @VossDykeBallonGupta:2019;@TangLeeChuangHuang:2020]. However, due to its high magnitude, the PWV is currently not directly measurable with MRI techniques [@RingelsteinKahlscheuerNiggemeyerOtis:1990]. Hence, several methods have been proposed for its calculation, which are based on blood flow data obtained in magnetic resonance imaging (MRI), the transit-time of the pulse wave [@Markl:2010; @FieldenFornwaltJeroschHeroldEisnerStillmanOshinski:2008; @BargiotasMousseauxYuVenkateshBollacheCesareLimaRedheuilKachenoura:2015], a maximum-likelihood estimator [@BjoernfotGarpebringQvarlanderMalmEklundWaahlin:2021], or on inverse problems approaches [@HubmerNeubauerRamlauVoss:2020;@HubmerNeubauerRamlauVoss:2018;@WeissingerHubmerRamlauVoss:2025].
+The PWV is a well-studied parameter in medicine, known to correlate with aging and neuro-degenerative diseases [@Li:2004; @GillerAasli:1994;@RabbenStergiopulosHellevikSmisethSloerdahlUrheimAngelsen:2004; @VulliemozStergiopulosMeuli:2002]. Due to its potential as a biomarker for early diagnosis of such conditions, accurate measurement of the PWV has garnered significant interest [@DarwichLangevinDarwich:2015; @VossDykeBallonGupta:2019;@TangLeeChuangHuang:2020]. However, due to its high magnitude, accurate direct measurement of the PWV with MRI poses challenges [@RingelsteinKahlscheuerNiggemeyerOtis:1990]. Hence, several methods have been proposed for its calculation, which are based on blood flow data obtained in magnetic resonance imaging (MRI): Methods based on the transit-time of the pulse wave [@Markl:2010; @FieldenFornwaltJeroschHeroldEisnerStillmanOshinski:2008; @BargiotasMousseauxYuVenkateshBollacheCesareLimaRedheuilKachenoura:2015], a maximum-likelihood estimator [@BjoernfotGarpebringQvarlanderMalmEklundWaahlin:2021], and an inverse problems approach that includes splitting of the pulse waves [@HubmerNeubauerRamlauVoss:2020;@HubmerNeubauerRamlauVoss:2018;@WeissingerHubmerRamlauVoss:2025].
 
-The MATLAB-based PWApp enables PWV estimation with all of these types of methods within a uniform environment, which includes the preparation of MRI-based data, selection of involved data-points, and segmentation of the data into flowing and non-flowing parts and data normalization. Particularly data-point selection is hard to automatize and needs visual inspection, which motivated a GUI for this research application.
+The MATLAB-based PWApp enables PWV estimation with all of these methods within a uniform environment, which includes the preparation of MRI-based data, selection of involved data-points, segmentation of the data into flowing and non-flowing parts, and data normalization. Particularly data-point selection is hard to automatize and needs visual inspection, which motivated a GUI for this research application.
 
-Furthermore, the (pulse-)wave describing the blood flow velocity along an intracranial artery consists of a forward (anterograde) and a backward (retrograde, reflected) part, but measurements of this wave usually consist of a superposition of these components [@VossDykeBallonGupta:2019]. However, common methods for PWV-estimation usually do not consider the backwards wave, a gap which was closed in [@WeissingerHubmerRamlauVoss:2025]. An additional motivation for the PWApp is to provide a user-friendly tool which incorporates this method for PWV estimation and pulse wave splitting as well.
+Furthermore, the pulse wave describing the blood flow velocity along an intracranial artery consists of a forward (anterograde) and a backward (retrograde, reflected) part, but measurements of this wave usually consist of a superposition of these components [@VossDykeBallonGupta:2019]. However, common methods for PWV-estimation usually do not consider the backwards wave, for which a solution was proposed in [@WeissingerHubmerRamlauVoss:2025]. An additional motivation for the PWApp is to provide a user-friendly tool for pulse wave splitting as well.
 
 # Description of the App
 
-The app layout is shown in Figure \autoref{fig:mainlayout}. The main window is separated into two panels:
+The app layout is shown in \autoref{fig:mainlayout}. The main window is separated into two panels:
 
 - **Options panel (left)**: for input settings, parameters, and actions
+
 - **Visualization panel (right)**: for displaying outputs, previews, and results
-
-
 
 To perform a complete PWV estimation from raw MRI data, the app follows a structured five-step workflow which has to be completed in order. The steps are:
 
@@ -76,7 +71,7 @@ To perform a complete PWV estimation from raw MRI data, the app follows a struct
 
 ![Main layout of the PWApp.\label{fig:mainlayout}](Figures/full_app.png)
 
-These steps are described in general below, and in detail in the PWApp [manual](https://github.com/weisslu/PWApp).
+These steps are described in general below, and in detail in the PWApp manual, which can be found in the [repository](https://github.com/weisslu/PWApp).
 
 
 ### Step 1: Load flow MRI data
@@ -89,9 +84,9 @@ A centerline is computed for the segmented artery data. This step also separates
 
 ### Step 3: Select data-points for PWV estimation
 
-Spatial points along the centerlines of specific branches can be selected manually; see Figure \autoref{fig:selectdatapoints}. Instead of selecting individual points, the user can also automatically select all available data points along a branch. Distances between selected points are computed using a Bezier-curve approximation (De Casteljau's algorithm, see [@Farin:2000]). This achieves sub-pixel accuracy and mimics the natural curvature of arteries.
+Spatial points (positions on the vessels) along the centerlines of specific branches can be selected manually; see \autoref{fig:selectdatapoints}. Instead of selecting individual points, the user can also automatically select all available data points along a branch. Distances between selected points are computed using a Bezier-curve approximation (De Casteljau's algorithm, see [@Farin:2000]). This achieves sub-pixel accuracy and mimics the natural curvature of arteries.
 
-![Data point selection window for PWV estimation: This window allows manual selection of spatial points along the centerlines of artery branches to be used in PWV estimation.\label{fig:selectdatapoints}](Figures/select_app.png)
+![Data point selection window for PWV estimation: PWApp allows manual selection of spatial points along the centerlines of artery branches to be used in PWV estimation.\label{fig:selectdatapoints}](Figures/select_app.png)
 
 ### Step 4: Compute waveforms
 
@@ -105,11 +100,10 @@ An example dataset is accessible in the repository at `PWApp/example/flow_dicoms
 
 # Disclaimer
 
-This app is highly influenced by the [4D Flow PWV Tool](https://www.github.com/schrau24/4DFlowPWVTool) by Eric Schrauben [@EricSchrauben;@SchraubenWaahlinAmbarkiSpaakMalmWiebenEklund:2015]. HUV is an inventor on Cornell University patents related to this research.
+Parts of the app use code from the [4D Flow PWV Tool](https://www.github.com/schrau24/4DFlowPWVTool) by Eric Schrauben [@EricSchrauben;@SchraubenWaahlinAmbarkiSpaakMalmWiebenEklund:2015], specifically the Wavelet, Cross-Correlation, and Maximum Likelihood Estimation methods for pulse wave velocity estimation as well as the branch identification algorithm. HUV is an inventor on Cornell University patents related to this research.
 
 # Acknowledgements
 
-HUV acknowledges support from the Nancy M. and Samuel C. Fleming Research Scholar Award in Intercampus Collaborations, Cornell University. RR and SH were funded in part by the Austrian Science Fund (FWF) SFB 10.55776/F68 ``Tomography Across the Scales'', project F6805-N36 (Tomography in Astronomy). For open access purposes, the authors have applied a CC BY public copyright license to any author-accepted manuscript version arising from this submission. LW is partially supported by the State of Upper Austria.
+RR and SH were funded in part by the Austrian Science Fund (FWF) SFB 10.55776/F68 ``Tomography Across the Scales'', project F6805-N36 (Tomography in Astronomy). For open access purposes, the authors have applied a CC BY public copyright license to any author-accepted manuscript version arising from this submission. LW is partially supported by the State of Upper Austria.
 
 # References
-
