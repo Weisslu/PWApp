@@ -58,8 +58,7 @@ Furthermore, the pulse wave describing the blood flow velocity along an intracra
 The app layout is shown in \autoref{fig:mainlayout}. The main window is separated into two panels:
 
 - **Options panel (left)**: for input settings, parameters, and actions
-
-- **Visualization panel (right)**: for displaying outputs, previews, and results
+- **Visualization panel (right)**: for displaying outputs, previews, and results
 
 To perform a complete PWV estimation from raw MRI data, the app follows a structured five-step workflow which has to be completed in order. The steps are:
 
